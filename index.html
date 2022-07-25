@@ -14,14 +14,25 @@
         <h2>Vacation Contest Sign-Up Form</h2>
         <form action="results.html" method="GET"> 
             <label for="firstname">Your First Name</label>
-            <input type="text" id="firstname" name="firstname"> 
+            <span class="required-field">*</span>            
+            <input type="text" id="firstname" name="firstname" minlength=2 maxlength=35 required>             
             <label for="lastname">Your Last Name</label>
-            <input type="text" id="lastname" name="lastname"> 
+            <span class="required-field">*</span>
+            <input type="text" id="lastname" name="lastname" minlength=2 maxlength=35 required>
+            <label for="age">Your Age</label>
+            <input type="number" name="age" id="age" min="21" max="120">
+            <h5>Participants must be 21 or older to participate</h5>
+            <label for="pwd">Password:</label>
+            <span class="required-field">*</span>
+            <input type="password" id="pwd" name="pwd" minlength="6" maxlength="6" pattern="[A-Za-z0-9]{6}" title="Letters and numbers only and 6 digits" required><br><br>
+              
+ 
             
             <fieldset>
                 <legend>Your Contact Info</legend>
                 <label for="email">Your Email</label>
-                <input type="text" id="email" name="email"> 
+                <span class="required-field">*</span>
+                <input type="text" id="email" name="email" required> 
                 <label for="Street">Your Street address</label>
                 <input type="text" id="street" name="street">
                 <label for="City">City</label>
@@ -81,7 +92,7 @@
         
                 </datalist>                            
                 <label for="Zip">Zip Code</label>
-                <input type="text" id="Zip" name="Zip">               
+                <input type="text" id="Zip" name="Zip"pattern="[0-9]{5}" title="5 digits only"><br><br>               
             </fieldset>
             <fieldset>
                 <legend>Your Preferences</legend>
